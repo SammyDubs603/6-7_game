@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6-7 World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <header class="topbar glass">
+    <h1>🌈 6-7 World</h1>
+    <p class="tagline">Shout it. Tap it. Gesture it. Chaos follows. ✨</p>
+    <div class="status-row">
+      <span id="voiceStatus" class="pill">🎙️ Voice: idle</span>
+      <span id="modeStatus" class="pill">Mode: Co-op Quest</span>
+      <span id="playersStatus" class="pill">Players: 1/4</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel glass control-panel">
+      <h2>Core Trigger</h2>
+      <p>Use the iconic <strong>“6-7!”</strong> trigger to animate the world.</p>
+      <div class="controls">
+        <button id="triggerBtn" class="cta">6-7! ⚡</button>
+        <button id="gestureBtn" class="secondary">🙌 Scales Gesture</button>
+        <button id="voiceBtn" class="secondary">🎤 Start Voice</button>
+      </div>
+      <div class="combo-meter">
+        <label for="comboProgress">Combo Chain</label>
+        <progress id="comboProgress" max="10" value="0"></progress>
+      </div>
+      <p id="comboText" class="combo-text">Build a combo with rhythm and gestures!</p>
+    </section>
+
+    <section class="panel glass world-panel">
+      <h2>Reactive World</h2>
+      <div id="world" class="world">
+        <div class="item bridge">🌉 Bridge</div>
+        <div class="item platform">🌀 Platform</div>
+        <div class="item npc">🕺 NPC Crew</div>
+        <div class="item portal">🪐 Portal</div>
+        <div class="item loot">🎁 Loot Cloud</div>
+      </div>
+      <p id="reactionFeed" class="feed">Waiting for a big “6-7!”...</p>
+    </section>
+
+    <section class="panel glass scoreboard-panel">
+      <h2>Party Modes</h2>
+      <div class="mode-buttons">
+        <button class="mode active" data-mode="Co-op Quest">Co-op Quest</button>
+        <button class="mode" data-mode="Rhythm Battle">Rhythm Battle</button>
+        <button class="mode" data-mode="6-7 Tag">6-7 Tag</button>
+        <button class="mode" data-mode="Charades">6-7 Charades</button>
+      </div>
+      <div class="score-grid">
+        <div class="score-card">
+          <h3>Team Spark</h3>
+          <p id="sparkScore" class="score">0</p>
+        </div>
+        <div class="score-card">
+          <h3>Team Boom</h3>
+          <p id="boomScore" class="score">0</p>
+        </div>
+      </div>
+      <button id="joinBtn" class="secondary wide">➕ Add Local Player</button>
+    </section>
+
+    <section class="panel glass unlock-panel">
+      <h2>Unlocks & Viral Hooks</h2>
+      <ul id="unlockList">
+        <li>🎉 Start a 3x combo to unlock Party Confetti</li>
+        <li>🦄 Reach 8 combo to unlock Neon Unicorn Skin</li>
+        <li>📹 Hit 10 combo to generate a remix-ready 6-7 clip</li>
+      </ul>
+      <button id="clipBtn" class="cta wide">Create 6-7 Reaction Clip</button>
+      <p id="clipStatus" class="feed">No clip yet — build hype first!</p>
+    </section>
+  </main>
+
+  <template id="popTemplate">
+    <span class="popup">6-7!</span>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
